@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Fredericka+the+Great&display=swap" rel="stylesheet">
+    <style>
+    body {
+        background-image: url(http://www.moriahthemedium.com/wp-content/uploads/2018/04/AdobeStock_102512950-1024x765.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #spiritshape {
+        width: 500px;
+        height: 390px;
+        background-color: violet;
+        font-size: 33px;
+        color: lavenderblush;
+        margin-top: 39px;
+        text-align: center;
+        font-family: 'Dosis', sans-serif;
+        position: absolute;
+        left: 50%;
+        top: 45%;
+        bottom: 50%;
+        transform: translate(-50%, -50%);
+        border-style: solid;
+        border-color: purple;
+        border-width: 10px;
+        border-radius: 1px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    #title {
+        width: 580px;
+        height: 63px;
+        background-color: lavenderblush;
+        text-align: center;
+        padding-top: 10px;
+        font-size: 40px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        font-family: 'Fredericka the Great', cursive;
+        color: purple;
+        border-radius: 20px;
+
+
+
+    }
+    </style>
+</head>
+
+<body>
+    <div id="title">
+        FIND YOUR SPIRIT SHAPE
+    </div>
+    <div id="spiritshape">
+        Your spirit shape is a... <br>
+    </div>
+    <script>
+    var spiritshape = document.getElementById('spiritshape');
+
+    spiritshape.addEventListener("click", function() {
+        console.log("hi");
+        console.log(Math.round(Math.random() * 6))
+        spiritshape.innerText = shapes[Math.round(Math.random() * 6)];
+
+
+    });
+
+    var shapes = ["SQUARE! You enjoy having some level of structure in activities but are generally an open-minded person. It takes a lot to upset you, but when you're sad everyone will know.", "CIRCLE! You're likable and reliable, but you enjoy having time to yourself. You are more creative than you think you are, and this may not come out in traditional art. Try something new, it may turn into a lifelong hobby.", "TRIANGLE! While you may come off a little judgmental at first, people soon realize that this is just because you set high standards for yourself and others. You are a fantastic team member and are usually good at collaboration, even if it may be hard to trust people.", "TRAPEZOID! Without a doubt, you're quite a funny person, sometimes unintentionally. This can be offputting to some, but you will definitely find a really close group of friends if you haven't already.", "RECTANGLE! It's hard to find somebody that can truly say they don't like you. You are level-headed, easy to get along with, and are an astute decision maker. When in doubt, people go to you for help.", "OCTAGON! Though some people wouldn't expect it just by seeing or hearing you, you are an excellent leader. You are intelligent, but often procrastinate or get stressed out. Your commanding presence and willingness to help others make you someone that many people feel comfortable around.", "HEXAGON! To be blunt, you're kind of a mean person. Deep down you know that you only hurt others because you want to be more like them, but it can be hard for you to voice this. Despite these clear flaws, you care deeply about a select group of people and are on your way to being a better person. You won't be a hexagon forever!"];
+    </script>
+</body>
+
+</html>

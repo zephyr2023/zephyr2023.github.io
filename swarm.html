@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    	#runner {
+    		background-color: black;
+    		height: 20px;
+    		width: 20px;
+    		position: absolute;
+    		z-index: 1000;
+    	}
+
+
+    </style>
+</head>
+
+<body>
+    <!-- What do I want to make? my favorite videos?
+
+school of fish. But I want each of them to know where they are in relationship to each other but I have no word for "me" or self.
+
+Make them bigger basedon how left they are? 
+
+Make the color change based on the wind speed?
+
+Show examples of cool projects where represent data in a particular way?
+
+ -->
+    
+<div id="runner"> </div>
+    <script type="text/javascript">
+    //constructor function)
+
+    var lookdown = this;
+    lookdown.makeZombie = function(i) {
+
+       var runner = document.getElementById("runner");
+
+
+    var left = runner.style.left;
+    left = "0px"
+
+    document.addEventListener("keydown", function(x) {
+        // alert(event.keyCode);
+        // console.log(x);
+        if (x.keyCode == 39) {
+            left=parseInt(left)+10+"px";};
+            runner.style.left=left;
+            console.log(left);
+
+        });
+
+
+        var zombie = document.createElement("div")
+        document.body.appendChild(zombie);
+        zombie.style.width = "30px";
+        zombie.style.transition="1s";
+        zombie.style.height = "30px";
+        zombie.style.backgroundImage="url(https://www.pngkey.com/png/full/323-3236172_active-zombie-activezombie-twitter-cartoon-zombie-head-png.png)";
+        zombie.style.backgroundSize="contain"; 
+        zombie.style.display = "inline-block";
+        zombie.style.gridTemplateColumns = "repeat(10, 20px)"
+        zombie.style.gridTemplaterows = "repeat(5, 20px)"
+        zombie.style.position = "relative";
+
+        function setPosition() {
+            zombie.style.left = Math.random() * 50 + "px";
+            zombie.style.top = Math.random() * 50 + "px";
+            zombie.style.transition="5s"
+        }
+
+//positioning in relationship to the mouse- want each one to swarm around it.p[]
+        // document.addEventListener(
+        // 	"mousemove,")
+
+        var move = 
+            setInterval(setPosition, 200);
+
+     
+
+     
+        zombie.id = "zombie" + i;
+
+        // zombie.addEventListener("click", function stop() {
+        //     console.log('hi');
+        //     clearInterval(move);
+        // });
+
+    };
+    // new makeZombie();
+
+    for (var i = 0; i < 50; i = i + 1) { new makeZombie(i) };
+
+
+
+    // function setPosition() {
+    //         makeFish.fish.style.left = makeFish.fish.style.left + Math.random() * 10 + "px";
+    //         makeFish.fish.style.top = makeFish.fish.style.top + Math.random() * 10 + "px";}
+
+    //         setInterval(setPosition, 500);
+    </script>
+</body>
+
+</html>
