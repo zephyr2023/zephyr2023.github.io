@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    <title>Bees!</title>
+    <style type="text/css">
+    body {
+        background-image: linear-gradient(to bottom right, #ff4e50, #f9d423);
+    }
+    #text {
+    	font-size: 200px;
+    	position: absolute;
+    	width: 100%;
+    	text-align: center;
+    	color: #2E81B3;
+    	font-family: 'Righteous', cursive;
+    	top: 25%;
+
+
+    }
+    
+    .bees {
+    
+        background-image: url(https://www.beesafebeeremoval.com/wp-content/uploads/2017/06/big-bee.png);
+        height: 50px;
+        width: 50px;
+        background-size: contain;
+/*        
+*/        position:relative;
+        display:inline-block;
+        margin:5px;
+
+    }
+    </style>
+</head>
+
+<body>
+<div id="text">bees</div> 
+
+    <script type="text/javascript">
+function makeBee ()
+
+{
+	    	var bee = document.createElement("div");
+       document.body.appendChild(bee);
+       bee.classList.add("bees");
+
+       function setPosition() {
+            bee.style.left = Math.random() * 200 + "px";
+            bee.style.top = Math.random() * 1000 + "px";
+        }
+
+       setInterval(setPosition, 500)
+}
+
+makeBee();
+for(var i=0; i<200; i=i+1){makeBee()};
+
+
+</script>
+</body>
+
+</html>

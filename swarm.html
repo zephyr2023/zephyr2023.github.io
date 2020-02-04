@@ -51,7 +51,16 @@ Show examples of cool projects where represent data in a particular way?
             console.log(left);
 
         });
+ 
+ document.addEventListener("keydown", function(x) {
+        // alert(event.keyCode);
+        // console.log(x);
+        if (x.keyCode == 38) {
+            right=parseInt(right)+-10+"px";};
+            runner.style.left=right;
+            console.log(right);
 
+        });
 
         var zombie = document.createElement("div")
         document.body.appendChild(zombie);
