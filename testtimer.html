@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        function TimerSwitch(pic) {
+            TimerRunning=true;
+            var timer = setTimeout('SwitchPic(pic)', 4000);  
+
+        }
+        function SwitchPic(pic) {
+            pic.src = "roly-wallpaper.jpg";
+        }
+    </script>
+</head>
+<body>
+    <img class="switch" src="argh.png" onclick="TimerSwitch(this)" />
+</body>
+</html>
