@@ -8,6 +8,7 @@
     body {
         margin: 0;
         background-color: rgb(230, 177, 0);
+
     }
 
     #opacity {
@@ -16,8 +17,10 @@
         left: 0px;
         height: 100%;
         width: 100%;
-        background-color: black;
         opacity: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(cloudy.png);
 
     }
 
@@ -78,17 +81,6 @@
 
     }
 
-    #clouds {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        height: 100%;
-        width: 100%;
-        background-image: url(cloudy.png);
-        opacity: 0.2;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
 
     #title {
         position: absolute;
@@ -123,7 +115,7 @@
     document.addEventListener("mousemove", function(cat) {
         document.body.style.backgroundColor = "rgb(" + "230" + "," + "177" + "," + cat.screenX / 4 + ")";
 
-        opacity.style.opacity = cat.screenX / 1500;
+        opacity.style.opacity = cat.screenX / 1800;
 
 
 
